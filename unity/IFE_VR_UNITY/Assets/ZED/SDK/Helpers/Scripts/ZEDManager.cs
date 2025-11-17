@@ -1859,7 +1859,9 @@ public class ZEDManager : MonoBehaviour
                 zedRigRoot = camLeftTransform.parent; //Make the camera's parent object (Camera_eyes in the ZED_Rig_Stereo prefab) the new zedRigRoot to be tracked.
             }
 
-            if (ZEDSupportFunctions.hasXRDevice() && allowARPassThrough)
+            Debug.Log("hasXRDevice() returns: " + ZEDSupportFunctions.hasXRDevice());
+
+            if (allowARPassThrough)
             {
                 isStereoRig = true;
 
